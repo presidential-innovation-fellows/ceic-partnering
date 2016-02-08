@@ -3,6 +3,7 @@
 *.swo
 *.swp
 *.map
+*.sublime-project
 /.bundle
 /.env
 /.foreman
