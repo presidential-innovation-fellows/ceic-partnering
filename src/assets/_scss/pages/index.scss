@@ -1,3 +1,33 @@
+.form-modal {
+  @extend %card;
+  border-radius: 0.25em;
+  opacity: 0;
+  padding: 1.5em;
+  position: absolute;
+  top: 50px;
+  visibility: hidden;
+  width: 100%;
+
+  &.active {
+    @include transition(all 0.3s ease);
+    opacity: 1;
+    top: -100px;
+    visibility: visible;
+  }
+
+  h2 {
+    color: $color-gray-warm-dark;
+    font-family: $header-font;
+    font-size: 2.5em;
+    letter-spacing: -0.05em;
+    margin-top: 0;
+  }
+}
+
+.forms {
+  position: relative;
+}
+
 .pages-index {
 
   a {
@@ -10,11 +40,87 @@
     }
   }
 
-  code {
-    background-color: lighten($color-gray-light, 20);
+  form {
+    max-width: none;
+
+    input {
+      max-width: none;
+    }
+
+    li {
+      display: block;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    ul {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.site-hero {
+  @include linear-gradient(to bottom, $color-primary, $color-blue-green);
+  color: $color-white;
+  height: 800px;
+  text-align: center;
+
+  a {
+    color: lighten($color-primary, 45);
+    font-family: $header-font;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+    text-transform: uppercase;
+
+    &:hover {
+      border-bottom: 2px solid $color-white;
+      color: $color-white;
+    }
+  }
+
+  h1,
+  h2 {
+    font-family: $header-font;
+    font-weight: normal;
+    letter-spacing: 0em;
   }
 
   h1 {
-    color: $color-primary-darker;
+    font-size: 4em;
+    margin: 0;
+  }
+
+  h2 {
+    color: lighten($color-primary, 40);
+    display: inline-block;
+    margin-bottom: 0.25em;
+  }
+
+  header {
+    padding-top: 16em;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  ul {
+    display: block;
+    width: 100%;
+  }
+
+  .label {
+    font-family: $header-font;
+    font-size: 1.25em;
+    font-weight: bold;
   }
 }

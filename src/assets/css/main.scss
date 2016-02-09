@@ -4,4 +4,12 @@
 @import "../_scss/vendor/standards-override/main";
 
 //* Import Project Styles Below *//
+@import "../_scss/typography/quicksand";
+@import "../_scss/variables";
+
+@import "../_scss/extends/card";
+
+@import "../_scss/modules/nav";
+
+@import "../_scss/pages/all";
 @import "../_scss/pages/index";
