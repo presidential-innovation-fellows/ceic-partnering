@@ -80,19 +80,57 @@ body.pages-index
             h2 Partner with a lab
             div 1. Description of the value prop
         ul
-          li#foli1.notranslate
-            label#title1.desc(for='Field1')
-              | Name
-            span
-              label(for='Field1') First
-              input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
-            span
-              label(for='Field2') Last
-              input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
-          li#foli4.notranslate
-            label#title4.desc(for='Field4')
-              | Email
-        input#idstamp(type='hidden', name='idstamp', value='AnK43sAGhmHot2RtA5EsLz1zjBTTVnvJnbGF30GkeXI=')
+        li#foli1.notranslate
+          label#title1.desc(for='Field1')
+            | Name
+          span
+            label(for='Field1') First
+            input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
+          span
+            label(for='Field2') Last
+            input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
+        li#foli4.notranslate
+          label#title4.desc(for='Field4')
+            | Email
+          div
+            input#Field4.field.text.medium(name='Field4', type='email', spellcheck='false', value='', maxlength='255', tabindex='3')
+        li#foli3.notranslate
+          label#title3.desc(for='Field3')
+            | Company
+          div
+            input#Field3.field.text.medium(name='Field3', type='text', value='', maxlength='255', tabindex='4', onkeyup='')
+        li#foli6.notranslate
+          label#title6.desc(for='Field6')
+            | Industry
+          div
+            select#Field6.field.select.medium(name='Field6', tabindex='5')
+              option(value='Biofuels', selected='selected')
+                | Biofuels
+              option(value='Solar')
+                | Solar
+              option(value='Battery Storage')
+                | Battery Storage
+              option(value='Wind')
+                | Wind
+              option(value='Water')
+                | Water
+              option(value='Nuclear')
+                | Nuclear
+        li#foli7.notranslate
+          label#title7.desc(for='Field7')
+            | Description of Interest
+          div
+            textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='')
+        |  
+        li.buttons
+          div
+            input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')
+        li.hide
+          label(for='comment') Do Not Fill This Out
+          textarea#comment(name='comment', rows='1', cols='1')
+          input#idstamp(type='hidden', name='idstamp', value='AnK43sAGhmHot2RtA5EsLz1zjBTTVnvJnbGF30GkeXI=')
+
+
 
     .form-modal
       form#form1.wufoo.topLabel.page(name='form1', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://piftest.wufoo.com/forms/z17wiku60j3sujm/#public')
