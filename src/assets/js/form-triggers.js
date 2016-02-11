@@ -8,19 +8,34 @@ ceic.formTriggers = {
       var formId = "#" + $(this).data("form-id");
       ceic.formTriggers.hideForms();
       ceic.formTriggers.showForm(formId);
+      ceic.formTriggers.showOverlay();
+    });
+  },
+
+  bindOverlay: function() {
+    $(".overlay").on("click", function() {
+      ceic.formTriggers.hideForms();
     });
   },
 
   hideForms: function() {
     $(".form-modal").removeClass("active");
+    ceic.formTriggers.hideOverlay();
+  },
+
+  hideOverlay: function() {
+    $(".overlay").removeClass("active");
   },
 
   showForm: function(formId) {
     var $form = $(formId),
-        $formModal = $form.parent(".form-modal");
+        $formModal = $form.closest(".form-modal");
     $formModal.addClass("active");
+  },
 
-    console.log(formId);
+  showOverlay: function() {
+    $(".overlay").addClass("active");
+    ceic.formTriggers.bindOverlay();
   }
 };
 
