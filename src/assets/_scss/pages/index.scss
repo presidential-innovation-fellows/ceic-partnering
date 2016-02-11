@@ -1,34 +1,107 @@
 .form-content {
   height: 100%;
   overflow: scroll;
+  padding: 0 1em;
 }
 
 .form-modal {
   @extend %card;
+  @include transition(all 0.2s ease);
+  background-color: $color-tan-light;
   border-radius: 0.25em;
-  left: 5%;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -20em;
   opacity: 0;
   padding: 1.5em;
   position: fixed;
-  top: 20%;
+  top: 10%;
   visibility: hidden;
-  width: 90%;
+  width: 40em;
   z-index: 1000;
 
   &.active {
-    @include transition(all 0.3s ease);
-    bottom: 10%;
     opacity: 1;
-    top: 10%;
     visibility: visible;
   }
 
+  [type="submit"] {
+    background-color: $color-blue-green;
+    padding: 0.75em 1.5em;
+  }
+
   h2 {
-    color: $color-gray-warm-dark;
+    color: $color-blue-green;
     font-family: $header-font;
     font-size: 2.5em;
+    font-weight: normal;
     letter-spacing: -0.05em;
     margin-top: 0;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  input {
+    &[type="email"],
+    &[type="text"] {
+      background-color: lighten($color-gray-tan, 1);
+      border: none;
+      border-radius: 0.25em;
+      color: darken($color-gray, 2);
+
+      &:focus {
+        box-shadow: 0 0 2px darken($color-primary, 10);
+      }
+    }
+  }
+
+  label {
+    color: $color-gray;
+    font-size: 0.9em;
+
+    &[for="Field1"],
+    &[for="Field2"] {
+      &::after {
+        content: " Name"
+      }
+    }
+  }
+
+  p {
+    color: $color-gray;
+    font-size: 0.9em;
+  }
+
+  select {
+    background-color: lighten($color-gray-tan, 1);
+    border: none;
+    color: darken($color-gray, 2);
+
+    &:focus {
+      box-shadow: 0 0 2px darken($color-primary, 10);
+    }
+  }
+
+  textarea {
+    background-color: lighten($color-gray-tan, 1);
+    border: none;
+    border-radius: 0.25em;
+    color: darken($color-gray, 2);
+    max-width: none;
+
+    &:focus {
+      box-shadow: 0 0 2px darken($color-primary, 10);
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .instruct {
+    margin-top: 0.25em;
   }
 }
 
@@ -36,7 +109,6 @@
   left: 0;
   position: absolute;
   right: 0;
-  z-index: 1000;
 }
 
 .forms {
@@ -78,10 +150,13 @@
 
 .overview {
   background-color: $color-tan-light;
+  margin-bottom: 5em;
+  padding: 3em 0;
 
   h1 {
+    color: $color-blue-green;
     font-family: $header-font;
-    font-size: 2em;
+    font-size: 2.25em;
     font-weight: normal;
     text-align: center;
   }
@@ -91,12 +166,17 @@
     font-weight: 100;
     text-align: center;
   }
+
+  .usa-grid {
+    max-width: 50em;
+  }
 }
 
 .site-hero {
   @include linear-gradient(to bottom, $color-primary, $color-blue-green);
   color: $color-white;
-  height: 550px;
+  height: 500px;
+  position: relative;
   text-align: center;
 
   @include media($extra-large-screen) {
@@ -122,7 +202,7 @@
   }
 
   h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0;
 
     @include media($extra-large-screen) {
@@ -131,9 +211,8 @@
   }
 
   h2 {
-    color: lighten($color-primary, 40);
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin-bottom: 0.25em;
 
     @include media($extra-large-screen) {
@@ -142,11 +221,16 @@
   }
 
   header {
-    padding-top: 9em;
+    padding-top: 7em;
 
     @include media($extra-large-screen) {
       padding-top: 16em;
     }
+  }
+
+  i {
+    color: $color-blue-green;
+    font-size: 1.5em;
   }
 
   li {
@@ -174,23 +258,39 @@
     width: 100%;
   }
 
+  .down-arrow {
+    background-color: $color-tan-light;
+    border-radius: 50%;
+    bottom: -2em;
+    height: 4em;
+    left: 50%;
+    margin-left: -2em;
+    padding: 1em;
+    position: absolute;
+    width: 4em;
+  }
+
   .label {
     font-family: $header-font;
-    font-size: 1.25em;
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: normal;
   }
 }
 
 .overlay {
+  @include transition(all 0.2s ease);
+  background-color: $color-gray;
   bottom: 0;
-  display: none;
   left: 0;
+  opacity: 0;
   position: fixed;
   right: 0;
   top: 0;
+  visibility: hidden;
   z-index: 100;
 
   &.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 }
