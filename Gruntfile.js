@@ -89,17 +89,25 @@ module.exports = function(grunt) {
         ],
         tasks: ['newer:copy']
       }
-    }
+    },
 
+    'gh-pages': {
+        options: {
+          base: 'dist'
+        },
+        src: ['**']
+      }
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
 
   grunt.registerTask('default', [
     'clean',
@@ -110,4 +118,7 @@ module.exports = function(grunt) {
     'watch'
   ]);
 
+  grunt.registerTask('deploy', [
+    'gh-pages'
+  ]);
 };
