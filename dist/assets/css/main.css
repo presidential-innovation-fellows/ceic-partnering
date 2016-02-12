@@ -7,8 +7,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/assets/fonts/fontawesome-webfont.eot?v=4.5.0");
-  src: url("/assets/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/assets/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("/assets/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("/assets/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("/assets/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
+  src: url("assets/fonts/fontawesome-webfont.eot?v=4.5.0");
+  src: url("assets/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("assets/fonts/fontawesome-webfont.woff2?v=4.5.0") format("woff2"), url("assets/fonts/fontawesome-webfont.woff?v=4.5.0") format("woff"), url("assets/fonts/fontawesome-webfont.ttf?v=4.5.0") format("truetype"), url("assets/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -4381,38 +4381,78 @@ body {
 
 .form-content {
   height: 100%;
-  overflow: scroll; }
+  overflow: scroll;
+  padding: 0 1em; }
 
 .form-modal {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: #FCFAF7;
   border-radius: 0.25em;
-  left: 5%;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -20em;
   opacity: 0;
   padding: 1.5em;
   position: fixed;
-  top: 20%;
+  top: 10%;
   visibility: hidden;
-  width: 90%;
+  width: 40em;
   z-index: 1000; }
   .form-modal.active {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    bottom: 10%;
     opacity: 1;
-    top: 10%;
     visibility: visible; }
+  .form-modal [type="submit"] {
+    background-color: #1C907F;
+    padding: 0.75em 1.5em; }
   .form-modal h2 {
-    color: #494440;
+    color: #1C907F;
     font-family: "Quicksand";
     font-size: 2.5em;
+    font-weight: normal;
     letter-spacing: -0.05em;
     margin-top: 0; }
+  .form-modal header {
+    text-align: center; }
+  .form-modal input[type="email"], .form-modal input[type="text"] {
+    background-color: #f0eae4;
+    border: none;
+    border-radius: 0.25em;
+    color: #565c65; }
+    .form-modal input[type="email"]:focus, .form-modal input[type="text"]:focus {
+      box-shadow: 0 0 2px #1ca34b; }
+  .form-modal label {
+    color: #5b616b;
+    font-size: 0.9em; }
+    .form-modal label[for="Field1"]::after, .form-modal label[for="Field2"]::after {
+      content: " Name"; }
+  .form-modal p {
+    color: #5b616b;
+    font-size: 0.9em; }
+  .form-modal select {
+    background-color: #f0eae4;
+    border: none;
+    color: #565c65; }
+    .form-modal select:focus {
+      box-shadow: 0 0 2px #1ca34b; }
+  .form-modal textarea {
+    background-color: #f0eae4;
+    border: none;
+    border-radius: 0.25em;
+    color: #565c65;
+    max-width: none; }
+    .form-modal textarea:focus {
+      box-shadow: 0 0 2px #1ca34b; }
+  .form-modal .hide {
+    display: none; }
+  .form-modal .instruct {
+    margin-top: 0.25em; }
 
 .form-triggers {
   left: 0;
   position: absolute;
-  right: 0;
-  z-index: 1000; }
+  right: 0; }
 
 .forms {
   position: relative; }
@@ -4436,23 +4476,29 @@ body {
     display: block; }
 
 .overview {
-  background-color: #FCFAF7; }
+  background-color: #FCFAF7;
+  margin-bottom: 5em;
+  padding: 3em 0; }
   .overview h1 {
+    color: #1C907F;
     font-family: "Quicksand";
-    font-size: 2em;
+    font-size: 2.25em;
     font-weight: normal;
     text-align: center; }
   .overview p {
     font-size: 1.25em;
     font-weight: 100;
     text-align: center; }
+  .overview .usa-grid {
+    max-width: 50em; }
 
 .site-hero {
   background-color: #23CF5F;
   background-image: -webkit-linear-gradient(top, #23CF5F, #1C907F);
   background-image: linear-gradient(to bottom,#23CF5F, #1C907F);
   color: #ffffff;
-  height: 550px;
+  height: 500px;
+  position: relative;
   text-align: center; }
   @media screen and (min-width: 1400px) {
     .site-hero {
@@ -4470,24 +4516,26 @@ body {
     font-weight: normal;
     letter-spacing: 0em; }
   .site-hero h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin: 0; }
     @media screen and (min-width: 1400px) {
       .site-hero h1 {
         font-size: 4em; } }
   .site-hero h2 {
-    color: #c8f6d8;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin-bottom: 0.25em; }
     @media screen and (min-width: 1400px) {
       .site-hero h2 {
         font-size: 2em; } }
   .site-hero header {
-    padding-top: 9em; }
+    padding-top: 7em; }
     @media screen and (min-width: 1400px) {
       .site-hero header {
         padding-top: 16em; } }
+  .site-hero i {
+    color: #1C907F;
+    font-size: 1.5em; }
   .site-hero li {
     background-color: rgba(255, 255, 255, 0.15);
     display: inline-block;
@@ -4503,20 +4551,36 @@ body {
   .site-hero ul {
     display: block;
     width: 100%; }
+  .site-hero .down-arrow {
+    background-color: #FCFAF7;
+    border-radius: 50%;
+    bottom: -2em;
+    height: 4em;
+    left: 50%;
+    margin-left: -2em;
+    padding: 1em;
+    position: absolute;
+    width: 4em; }
   .site-hero .label {
     font-family: "Quicksand";
-    font-size: 1.25em;
-    font-weight: bold; }
+    font-size: 1.5em;
+    font-weight: normal; }
 
 .overlay {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: #5b616b;
   bottom: 0;
-  display: none;
   left: 0;
+  opacity: 0;
   position: fixed;
   right: 0;
   top: 0;
+  visibility: hidden;
   z-index: 100; }
   .overlay.active {
-    display: block; }
+    opacity: 1;
+    visibility: visible; }
 
 /*# sourceMappingURL=main.css.map */
