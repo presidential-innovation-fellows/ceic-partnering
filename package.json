@@ -10,6 +10,7 @@
     "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-gh-pages": "^1.0.0",
+    "grunt-github-pages": "0.0.4",
     "grunt-sass": "^1.1.0"
   },
   "scripts": {
