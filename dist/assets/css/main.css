@@ -4367,6 +4367,12 @@ body {
   box-shadow: 0 -1px 0 #f1f1f2, 0 0 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.09);
   padding: 1em; }
 
+.usa-disclaimer {
+  color: #5b616b;
+  font-size: 0.8em; }
+  .usa-disclaimer img {
+    margin-right: 0.5em; }
+
 .site-nav {
   background-color: #23CF5F;
   color: #ffffff; }
@@ -4449,13 +4455,18 @@ body {
   .form-modal .instruct {
     margin-top: 0.25em; }
 
-.form-triggers {
-  left: 0;
-  position: absolute;
-  right: 0; }
-
 .forms {
   position: relative; }
+
+.hero-art {
+  opacity: 0.25;
+  position: absolute;
+  right: 5em;
+  top: 0;
+  width: 350px; }
+  .hero-art img {
+    height: auto;
+    width: 100%; }
 
 .pages-index a {
   color: #23CF5F;
@@ -4476,11 +4487,10 @@ body {
     display: block; }
 
 .overview {
-  background-color: #FCFAF7;
-  margin-bottom: 5em;
+  background-color: #5b616b;
   padding: 3em 0; }
   .overview h1 {
-    color: #1C907F;
+    color: #ffffff;
     font-family: "Quicksand";
     font-size: 2.25em;
     font-weight: normal;
@@ -4493,23 +4503,16 @@ body {
     max-width: 50em; }
 
 .site-hero {
-  background-color: #23CF5F;
-  background-image: -webkit-linear-gradient(top, #23CF5F, #1C907F);
-  background-image: linear-gradient(to bottom,#23CF5F, #1C907F);
-  color: #ffffff;
-  height: 500px;
-  position: relative;
-  text-align: center; }
+  background-color: #ffffff;
+  height: 550px;
+  position: relative; }
   @media screen and (min-width: 1400px) {
     .site-hero {
       height: 800px; } }
   .site-hero a {
-    color: #def9e8;
+    color: #1fb955;
     font-family: "Quicksand";
     font-weight: bold; }
-    .site-hero a:hover {
-      border-bottom: 2px solid #ffffff;
-      color: #ffffff; }
   .site-hero h1,
   .site-hero h2 {
     font-family: "Quicksand";
@@ -4524,17 +4527,17 @@ body {
   .site-hero h2 {
     display: inline-block;
     font-size: 1.25em;
-    margin: 2em 0 0.25em; }
+    margin: 0 0 0.25em; }
     @media screen and (min-width: 1400px) {
       .site-hero h2 {
         font-size: 2em; } }
   .site-hero header {
-    padding-top: 9em; }
+    padding-top: 7em; }
     @media screen and (min-width: 1400px) {
       .site-hero header {
         padding-top: 16em; } }
   .site-hero i {
-    color: #1C907F;
+    color: #23CF5F;
     font-size: 1.5em; }
   .site-hero li {
     background-color: rgba(255, 255, 255, 0.15);
@@ -4546,24 +4549,31 @@ body {
     .site-hero li:last-child {
       margin-right: 0; }
     .site-hero li a {
-      display: inline-block;
-      padding: 0.75em; }
+      display: inline-block; }
+  .site-hero p {
+    color: #5b616b;
+    font-weight: 100;
+    margin-top: 0.25em;
+    max-width: 30em; }
   .site-hero ul {
     display: block;
     width: 100%; }
   .site-hero .down-arrow {
-    background-color: #FCFAF7;
+    background-color: #5b616b;
     border-radius: 50%;
     bottom: -2em;
     height: 4em;
     left: 50%;
+    line-height: 4em;
     margin-left: -2em;
-    padding: 1em;
+    padding-top: 0.2em;
     position: absolute;
+    text-align: center;
+    vertical-align: center;
     width: 4em; }
   .site-hero .label {
     font-family: "Quicksand";
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: normal;
     margin-bottom: 0.5em; }
 

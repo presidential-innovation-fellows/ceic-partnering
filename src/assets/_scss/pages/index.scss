@@ -105,14 +105,21 @@
   }
 }
 
-.form-triggers {
-  left: 0;
-  position: absolute;
-  right: 0;
-}
-
 .forms {
   position: relative;
+}
+
+.hero-art {
+  opacity: 0.25;
+  position: absolute;
+  right: 5em;
+  top: 0;
+  width: 350px;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .pages-index {
@@ -149,12 +156,11 @@
 }
 
 .overview {
-  background-color: $color-tan-light;
-  margin-bottom: 5em;
+  background-color: $color-gray;
   padding: 3em 0;
 
   h1 {
-    color: $color-blue-green;
+    color: $color-white;
     font-family: $header-font;
     font-size: 2.25em;
     font-weight: normal;
@@ -173,25 +179,18 @@
 }
 
 .site-hero {
-  @include linear-gradient(to bottom, $color-primary, $color-blue-green);
-  color: $color-white;
-  height: 500px;
+  background-color: $color-white;
+  height: 550px;
   position: relative;
-  text-align: center;
 
   @include media($extra-large-screen) {
     height: 800px;
   }
 
   a {
-    color: lighten($color-primary, 45);
+    color: darken($color-primary, 5);
     font-family: $header-font;
     font-weight: bold;
-
-    &:hover {
-      border-bottom: 2px solid $color-white;
-      color: $color-white;
-    }
   }
 
   h1,
@@ -213,7 +212,7 @@
   h2 {
     display: inline-block;
     font-size: 1.25em;
-    margin: 2em 0 0.25em;
+    margin: 0 0 0.25em;
 
     @include media($extra-large-screen) {
       font-size: 2em;
@@ -221,7 +220,7 @@
   }
 
   header {
-    padding-top: 9em;
+    padding-top: 7em;
 
     @include media($extra-large-screen) {
       padding-top: 16em;
@@ -229,7 +228,7 @@
   }
 
   i {
-    color: $color-blue-green;
+    color: $color-primary;
     font-size: 1.5em;
   }
 
@@ -249,8 +248,14 @@
 
     a {
       display: inline-block;
-      padding: 0.75em;
     }
+  }
+
+  p {
+    color: $color-gray;
+    font-weight: 100;
+    margin-top: 0.25em;
+    max-width: 30em;
   }
 
   ul {
@@ -259,20 +264,23 @@
   }
 
   .down-arrow {
-    background-color: $color-tan-light;
+    background-color: $color-gray;
     border-radius: 50%;
     bottom: -2em;
     height: 4em;
     left: 50%;
+    line-height: 4em;
     margin-left: -2em;
-    padding: 1em;
+    padding-top: 0.2em;
     position: absolute;
+    text-align: center;
+    vertical-align: center;
     width: 4em;
   }
 
   .label {
     font-family: $header-font;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: normal;
     margin-bottom: 0.5em;
   }

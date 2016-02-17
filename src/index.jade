@@ -1,11 +1,16 @@
 include modules/_head.jade
 body.pages-index
+  include modules/_disclaimer.jade
   section.site-hero
     .usa-grid
       header
         span.label Welcome to the
-        h1 CEIC Partnering Service
-        h2 Get Started
+        h1 CEIC Partnering
+          br
+          | Service
+        p
+          | Connecting you with experts and resources on clean energy
+          | technologies at the Department of Energy.
         ul.form-triggers
           li
             a(class="form-trigger" href="#" data-form-id="form3") Connect with a Scientist
@@ -13,15 +18,14 @@ body.pages-index
             a(class="form-trigger" href="#" data-form-id="form4") Partner with a Lab
           li
             a(class="form-trigger" href="#" data-form-id="form1") Ask a Question
+    .hero-art
+      img(src="assets/img/hero-art-bw-alt.png")
     .down-arrow
       i.fa.fa-arrow-down
 
   section.overview
     .usa-grid
-      h1 What is the Parterning Service?
-      p
-        | The Partnering service connects you to experts and resources on clean
-        | energy technologies.
+      h1 How it Works
 
   section.usa-grid.forms
     .form-modal
