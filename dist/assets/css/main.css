@@ -4398,6 +4398,30 @@ h5,
 h6 {
   font-family: "Quicksand"; }
 
+.pages-confirmation-page a {
+  color: #1ca34b;
+  text-decoration: none; }
+
+.pages-confirmation-page h1 {
+  font-weight: normal; }
+
+.pages-confirmation-page i {
+  font-size: 0.8em;
+  margin-right: 0.5em; }
+
+.pages-confirmation-page p {
+  font-weight: 100; }
+
+.pages-confirmation-page .message .usa-grid {
+  max-width: 40em;
+  text-align: center; }
+
+.pages-confirmation-page .usa-button {
+  background-color: #1fb955;
+  font-family: "Quicksand"; }
+  .pages-confirmation-page .usa-button:hover {
+    background-color: #1ca34b; }
+
 .faq {
   background-color: #FCFAF7;
   padding: 6em 0; }

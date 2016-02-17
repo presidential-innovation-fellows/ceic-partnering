@@ -1,0 +1,36 @@
+.pages-confirmation-page {
+
+  a {
+    color: darken($color-primary, 10);
+    text-decoration: none;
+  }
+
+  h1 {
+    font-weight: normal;
+  }
+
+  i {
+    font-size: 0.8em;
+    margin-right: 0.5em;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
+  .message {
+    .usa-grid {
+      max-width: 40em;
+      text-align: center;
+    }
+  }
+
+  .usa-button {
+    background-color: darken($color-primary, 5);
+    font-family: $header-font;
+
+    &:hover {
+      background-color: darken($color-primary, 10);
+    }
+  }
+}
