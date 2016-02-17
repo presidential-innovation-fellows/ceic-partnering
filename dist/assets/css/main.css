@@ -4385,6 +4385,11 @@ body {
 body {
   background: #f9f9f9; }
 
+form {
+  max-width: none; }
+  form input {
+    max-width: none; }
+
 h1,
 h2,
 h3,
@@ -4392,6 +4397,26 @@ h4,
 h5,
 h6 {
   font-family: "Quicksand"; }
+
+.faq {
+  background-color: #FCFAF7;
+  padding: 6em 0; }
+  .faq h1 {
+    font-weight: normal;
+    margin: 0 0 1em;
+    text-align: center; }
+  .faq h2 {
+    color: #1ca34b;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 0; }
+  .faq ol {
+    margin: 0; }
+  .faq p {
+    font-weight: 100;
+    margin-top: 0; }
+  .faq .usa-grid {
+    max-width: 50em; }
 
 .form-content {
   height: 100%;
@@ -4498,32 +4523,15 @@ h6 {
   .how-listitem:nth-child(2n) .icon {
     padding: 0.5em; }
 
-.pages-index a {
-  color: #23CF5F;
-  font-weight: bold;
-  text-decoration: none; }
-  .pages-index a:hover {
-    color: #1ca34b; }
-
-.pages-index form {
-  max-width: none; }
-  .pages-index form input {
-    max-width: none; }
-  .pages-index form li {
-    display: block; }
-    .pages-index form li.hide {
-      display: none; }
-  .pages-index form ul {
-    display: block; }
-
 .overview {
   background-color: #5b616b;
-  padding: 4em 0; }
+  padding: 8em 0; }
   .overview h1 {
     color: #ffffff;
     font-family: "Quicksand";
     font-size: 2.25em;
     font-weight: normal;
+    margin-top: 0;
     text-align: center; }
   .overview h2 {
     color: #ffffff;
@@ -4545,6 +4553,21 @@ h6 {
     max-width: 36em;
     width: 70%; }
 
+.pages-index a {
+  color: #23CF5F;
+  font-weight: bold;
+  text-decoration: none; }
+  .pages-index a:hover {
+    color: #1ca34b; }
+
+.pages-index li {
+  display: block; }
+  .pages-index li.hide {
+    display: none; }
+
+.pages-index ul {
+  display: block; }
+
 .site-hero {
   background-color: #ffffff;
   height: 550px;
@@ -4563,7 +4586,8 @@ h6 {
     letter-spacing: 0em; }
   .site-hero h1 {
     font-size: 3em;
-    margin: 0; }
+    line-height: 0.95em;
+    margin: 0.1em 0 0; }
     @media screen and (min-width: 1400px) {
       .site-hero h1 {
         font-size: 4em; } }
@@ -4580,7 +4604,7 @@ h6 {
       .site-hero header {
         padding-top: 16em; } }
   .site-hero i {
-    color: #23CF5F;
+    color: #ffffff;
     font-size: 1.5em; }
   .site-hero li {
     background-color: rgba(255, 255, 255, 0.15);
@@ -4596,7 +4620,7 @@ h6 {
   .site-hero p {
     color: #5b616b;
     font-weight: 100;
-    margin-top: 0.25em;
+    margin-top: 0.75em;
     max-width: 30em; }
   .site-hero ul {
     display: block;
@@ -4617,8 +4641,7 @@ h6 {
   .site-hero .label {
     font-family: "Quicksand";
     font-size: 1.4em;
-    font-weight: normal;
-    margin-bottom: 0.5em; }
+    font-weight: normal; }
   .site-hero .usa-grid {
     position: relative; }
 
