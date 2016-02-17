@@ -4,9 +4,8 @@
       header#header.info
         h2 Partner with a Lab
         p
-          | If you want to understand what capabilities our labs have to use
-          | them for your research or partner with a lab on scientific
-          | discovery, let us know what you are looking to explore.
+          | If you want to partner with a lab or better understand capabilities
+          | let us know what you are looking to explore
       ul
         li#foli1.notranslate
           label#title1.desc.hide(for='Field1')
@@ -24,95 +23,48 @@
             input#Field4.field.text.medium(name='Field4', type='email', spellcheck='false', value='', maxlength='255', tabindex='3', required)
         li#foli3.notranslate
           label#title3.desc(for='Field3')
-            | Company
+            | Organization
           div
             input#Field3.field.text.medium(name='Field3', type='text', value='', maxlength='255', tabindex='4', onkeyup='')
-        li#foli6.notranslate
-          label#title6.desc(for='Field6')
-            | Industry
+        li#foli14.notranslate
+          label#title14.desc(for='Field14')
+            | Select a Lab
           div
-            select#Field6.field.select.medium(name='Field6', tabindex='5')
-              optgroup(label="Advanced Materials")
-                option(value='Damage Resistance', selected='selected')
-                  | Damage Resistance
-                option(value='Materials Characterization')
-                  | Materials Characterization
-                option(value='Membranes')
-                  | Membranes
-                option(value='Semiconductors')
-                  | Semiconductors
-                option(value='Structural Materials')
-                  | Structural Materials
-                option(value='Superconductors')
-                  | Superconductors
-              optgroup(label="Carbon-based Fuels – Bio & Fossil")
-                option(value='Biofuels')
-                  | Biofuels
-                option(value='Carbon Capture & Storage')
-                  | Carbon Capture &amp; Storage
-              optgroup(label="Earth & Environment")
-                option(value='Atmosphere/Climate')
-                  | Atmosphere/Climate
-                option(value='Geophysics and Seismology')
-                  | Geophysics and Seismology
-                option(value='Water Resource Management')
-                  | Water Resource Management
-              optgroup(label="Energy Efficiency")
-                option(value='Advanced Manufacturing')
-                  | Advanced Manufacturing
-                option(value='Buildings')
-                  | Buildings
-              optgroup(label="Nuclear")
-                option(value='Light Water Reactors')
-                  | Light Water Reactors
-                option(value='Reactor Fuels')
-                  | Reactor Fuels
-                option(value='Small Modular Reactors')
-                  | Small Modular Reactors
-              optgroup(label="Power Distribution & Management")
-                option(value='Grid Architecture')
-                  | Grid Architecture
-                option(value='Energy Storage')
-                  | Energy Storage
-                option(value='Renewable Energy Integration')
-                  | Renewable Energy Integration
-                option(value='Sensors & System Control')
-                  | Sensors &amp; System Control
-                option(value='Transmission & Distribution Components')
-                  | Transmission &amp; Distribution Components
-                option(value='Transformers')
-                  | Transformers
-              optgroup(label="Renewable Power")
-                option(value='Biopower')
-                  | Biopower
-                option(value='Solar')
-                  | Solar
-                option(value='Geothermal')
-                  | Geothermal
-                option(value='Hydro')
-                  | Hydro
-                option(value='Marine Hydrokinetic')
-                  | Marine Hydrokinetic
-                option(value='Stationary Fuel Cells')
-                  | Stationary Fuel Cells
-                option(value='Wind')
-                  | Wind
-              optgroup(label="Transportation")
-                option(value='Aerodynamics')
-                  | Aerodynamics
-                option(value='Batteries')
-                  | Batteries
-                option(value='Engines')
-                  | Engines
-                option(value='Sensors, Systems & Controls')
-                  | Sensors, Systems &amp; Controls
-                option(value='Heating & Cooling')
-                  | Heating &amp; Cooling
-                option(value='Vehicle Lightweighting')
-                  | Vehicle Lightweighting
-        li#foli7.notranslate
+            select#Field6.field.select.medium(name='Field14', tabindex='5', onChange='ceic.formTriggers.repeatValue(this, "Field15")')
+              option(value='Ames Laboratory', selected='selected')
+                | Ames Laboratory
+              option(value='Argonne National Laboratory')
+                | Argonne National Laboratory
+              option(value='Brookhaven National Laboratory')
+                | Brookhaven National Laboratory
+              option(value='Fermi National Accelerator Laboratory')
+                | Fermi National Accelerator Laboratory
+              option(value='Idaho National Laboratory')
+                | Idaho National Laboratory
+              option(value='Lawrence Berkeley National Laboratory')
+                | Lawrence Berkeley National Laboratory
+              option(value='Lawrence Livermore National Laboratory')
+                | Lawrence Livermore National Laboratory
+              option(value='Los Alamos National Laboratory')
+                | Los Alamos National Laboratory
+              option(value='National Energy Technology Laboratory')
+                | National Energy Technology Laboratory
+              option(value='National Renewable Energy Laboratory')
+                | National Renewable Energy Laboratory
+              option(value='Oak Ridge National Laboratory')
+                | Oak Ridge National Laboratory
+              option(value='Pacific Northwest National Laboratory')
+                | Pacific Northwest National Laboratory
+              option(value='Princeton Plasma Physics Laboratory')
+                | Princeton Plasma Physics Laboratory
+              option(value='Sandia National Laboratories')
+                | Sandia National Laboratories
+              option(value='Savannah River National Laboratory')
+                | Savannah River National Laboratory
+              option(value='SLAC National Accelerator Laboratory')
+                | SLAC National Accelerator Laboratory
           label#title7.desc(for='Field7')
-            | Description of Interest
+            | Provide additional details here
           div
             textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='', required)
           li#foli9.notranslate.hide
@@ -125,6 +77,11 @@
               | tags
             div
               input#Field11.field.text.medium(name='Field11', type='text', value='Partner with Lab', maxlength='255', tabindex='8', onkeyup='')
+          li#foli15.notranslate.hide
+            label#title15.desc(for='Field15')
+              | Source
+            div
+              input#Field15.field.text.medium(name='Field15', type='text', value='Ames Laboratory', maxlength='255', tabindex='9', onkeyup='')
         li.buttons
           div
             input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')

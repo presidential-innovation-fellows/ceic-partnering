@@ -18,8 +18,8 @@ ceic.formTriggers = {
     });
   },
 
-  repeatValue: function(showed) {
-    document.getElementById("Field18").value = showed.value;
+  repeatValue: function(showed, hiddenField) {
+    document.getElementById(hiddenField).value = showed.value;
   },
 
   hideForms: function() {
