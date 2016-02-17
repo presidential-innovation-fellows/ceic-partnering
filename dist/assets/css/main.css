@@ -4385,6 +4385,14 @@ body {
 body {
   background: #f9f9f9; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand"; }
+
 .form-content {
   height: 100%;
   overflow: scroll;
@@ -4468,6 +4476,28 @@ body {
     height: auto;
     width: 100%; }
 
+.how-icon {
+  background-color: #1fb955;
+  border-radius: 0.25em;
+  height: 2.5em;
+  margin: 0 auto;
+  padding: 0.4em 0;
+  text-align: center;
+  width: 2.5em; }
+  .how-icon i {
+    color: #b2f2c9;
+    font-size: 1.5em; }
+
+.how-listitem {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%; }
+  .how-listitem:last-child {
+    margin-right: 0; }
+  .how-listitem:nth-child(2n) .icon {
+    padding: 0.5em; }
+
 .pages-index a {
   color: #23CF5F;
   font-weight: bold;
@@ -4488,19 +4518,32 @@ body {
 
 .overview {
   background-color: #5b616b;
-  padding: 3em 0; }
+  padding: 4em 0; }
   .overview h1 {
     color: #ffffff;
     font-family: "Quicksand";
     font-size: 2.25em;
     font-weight: normal;
     text-align: center; }
+  .overview h2 {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin: 0.5em 0 0;
+    text-align: center; }
   .overview p {
-    font-size: 1.25em;
+    color: #cccccc;
+    font-size: 0.9em;
     font-weight: 100;
     text-align: center; }
-  .overview .usa-grid {
+  .overview ul {
+    display: block;
+    margin: -2em auto 0;
     max-width: 50em; }
+  .overview .process-line {
+    border-top: 4px solid #727a87;
+    margin: 5em auto 0;
+    max-width: 36em;
+    width: 70%; }
 
 .site-hero {
   background-color: #ffffff;
@@ -4576,6 +4619,8 @@ body {
     font-size: 1.4em;
     font-weight: normal;
     margin-bottom: 0.5em; }
+  .site-hero .usa-grid {
+    position: relative; }
 
 .overlay {
   -webkit-transition: all 0.2s ease;

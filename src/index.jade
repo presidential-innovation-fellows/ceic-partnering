@@ -25,276 +25,29 @@ body.pages-index
 
   section.overview
     .usa-grid
-      h1 How it Works
+      header
+        h1 How it Works
+      .process-line
+      ul.process
+        li.how-listitem
+          .how-icon
+            i.fa.fa-comment
+          h2 Send a Message
+          p Fill out one of the three forms above to send us a message.
+        li.how-listitem
+          .how-icon
+            i.fa.fa-code-fork
+          h2 Find an Expert
+          p Our tech transfer officers route your inquiry to the relevant experts.
+        li.how-listitem
+          .how-icon
+            i.fa.fa-comments
+          h2 Connect
+          p Once an expert is found, they'll reach out with answers to your questions.
 
   section.usa-grid.forms
-    .form-modal
-      .form-content
-        form#form3.wufoo.topLabel.page(name='form3', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://piftest.wufoo.com/forms/q1vgd3kh1jenfsk/#public')
-          header#header.info
-              h2 Speak to a Scientist
-              p
-                | If you want to learn more about a specific technology or
-                | science, we have a vast network of scientists with deep
-                | knowledge and we are here to help you connect to them.
-          ul
-            li#foli1.notranslate
-              label#title1.desc.hide(for='Field1')
-                | Name
-              span
-                label(for='Field1') First
-                input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
-              span
-                label(for='Field2') Last
-                input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
-            li#foli3.notranslate
-              label#title3.desc(for='Field3')
-                | Email
-              div
-                input#Field3.field.text.medium(name='Field3', type='email', spellcheck='false', value='', maxlength='255', tabindex='3')
-            li#foli4.notranslate
-              label#title4.desc(for='Field4')
-                | Company
-              div
-                input#Field4.field.text.medium(name='Field4', type='text', value='', maxlength='255', tabindex='4', onkeyup='')
-            li#foli6.notranslate
-              label#title6.desc(for='Field6')
-                | Industry
-              div
-                select#Field6.field.select.medium(name='Field6', tabindex='5')
-                  option(value='Solar', selected='selected')
-                    | Solar
-                  option(value='Biofuels')
-                    | Biofuels
-                  option(value='Battery Storage')
-                    | Battery Storage
-                  option(value='Wind')
-                    | Wind
-                  option(value='Water')
-                    | Water
-                  option(value='Nuclear')
-                    | Nuclear
-              p#instruct6.instruct
-                small Used to route your inquiry to a particular lab
-            li#foli7.notranslate
-              label#title7.desc(for='Field7')
-                | Other Notes
-              div
-                textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='')
-              li#foli9.notranslate.hide
-                label#title9.desc(for='Field9')
-                  | isPending
-                div
-                  input#Field9.field.text.medium(name='Field9', type='text', value='isPending', maxlength='255', tabindex='7', onkeyup='')
-              li#foli11.notranslate.hide
-                label#title11.desc(for='Field11')
-                  | tags
-                div
-                  input#Field11.field.text.medium(name='Field11', type='text', value='Connect to Expert', maxlength='255', tabindex='8', onkeyup='')
-            li.buttons
-              div
-                input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')
-            li.hide
-              label(for='comment') Do Not Fill This Out
-              textarea#comment(name='comment', rows='1', cols='1')
-              input#idstamp(type='hidden', name='idstamp', value='t+AH+0o6hLD1l5QUK3iBRpxr9FVUNGig2sycE4IgTq4=')
-
-    .form-modal
-      .form-content
-        form#form4.wufoo.topLabel.page(name='form4', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://piftest.wufoo.com/forms/rlotm2w1j4uqex/#public')
-          header#header.info
-            h2 Partner with a Lab
-            p
-              | If you want to understand what capabilities our labs have to use
-              | them for your research or partner with a lab on scientific
-              | discovery, let us know what you are looking to explore.
-          ul
-            li#foli1.notranslate
-              label#title1.desc.hide(for='Field1')
-                | Name
-              span
-                label(for='Field1') First
-                input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
-              span
-                label(for='Field2') Last
-                input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
-            li#foli4.notranslate
-              label#title4.desc(for='Field4')
-                | Email
-              div
-                input#Field4.field.text.medium(name='Field4', type='email', spellcheck='false', value='', maxlength='255', tabindex='3')
-            li#foli3.notranslate
-              label#title3.desc(for='Field3')
-                | Company
-              div
-                input#Field3.field.text.medium(name='Field3', type='text', value='', maxlength='255', tabindex='4', onkeyup='')
-            li#foli6.notranslate
-              label#title6.desc(for='Field6')
-                | Industry
-              div
-                select#Field6.field.select.medium(name='Field6', tabindex='5')
-                  option(value='Damage Resistance', selected='selected')
-                    | Damage Resistance
-                  option(value='Materials Characterization')
-                    | Materials Characterization
-                  option(value='Membranes')
-                    | Membranes
-                  option(value='Semiconductors')
-                    | Semiconductors
-                  option(value='Structural Materials')
-                    | Structural Materials
-                  option(value='Superconductors')
-                    | Superconductors
-                  option(value='Biofuels')
-                    | Biofuels
-                  option(value='Carbon Capture & Storage')
-                    | Carbon Capture &amp; Storage
-                  option(value='Atmosphere/Climate')
-                    | Atmosphere/Climate
-                  option(value='Geophysics and Seismology')
-                    | Geophysics and Seismology
-                  option(value='Water Resource Management')
-                    | Water Resource Management
-                  option(value='Advanced Manufacturing')
-                    | Advanced Manufacturing
-                  option(value='Buildings')
-                    | Buildings
-                  option(value='Light Water Reactors')
-                    | Light Water Reactors
-                  option(value='Reactor Fuels')
-                    | Reactor Fuels
-                  option(value='Small Modular Reactors')
-                    | Small Modular Reactors
-                  option(value='Grid Architecture')
-                    | Grid Architecture
-                  option(value='Energy Storage')
-                    | Energy Storage
-                  option(value='Renewable Energy Integration')
-                    | Renewable Energy Integration
-                  option(value='Sensors & System Control')
-                    | Sensors &amp; System Control
-                  option(value='Transmission & Distribution Components')
-                    | Transmission &amp; Distribution Components
-                  option(value='Transformers')
-                    | Transformers
-                  option(value='Biopower')
-                    | Biopower
-                  option(value='Solar')
-                    | Solar
-                  option(value='Geothermal')
-                    | Geothermal
-                  option(value='Hydro')
-                    | Hydro
-                  option(value='Marine Hydrokinetic')
-                    | Marine Hydrokinetic
-                  option(value='Stationary Fuel Cells')
-                    | Stationary Fuel Cells
-                  option(value='Wind')
-                    | Wind
-                  option(value='Aerodynamics')
-                    | Aerodynamics
-                  option(value='Batteries')
-                    | Batteries
-                  option(value='Engines')
-                    | Engines
-                  option(value='Sensors, Systems & Controls')
-                    | Sensors, Systems &amp; Controls
-                  option(value='Heating & Cooling')
-                    | Heating &amp; Cooling
-                  option(value='Vehicle Lightweighting')
-                    | Vehicle Lightweighting
-            li#foli7.notranslate
-              label#title7.desc(for='Field7')
-                | Description of Interest
-              div
-                textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='')
-              li#foli9.notranslate.hide
-                label#title9.desc(for='Field9')
-                  | isPending
-                div
-                  input#Field9.field.text.medium(name='Field9', type='text', value='isPending', maxlength='255', tabindex='7', onkeyup='')
-              li#foli11.notranslate.hide
-                label#title11.desc(for='Field11')
-                  | tags
-                div
-                  input#Field11.field.text.medium(name='Field11', type='text', value='Partner with Lab', maxlength='255', tabindex='8', onkeyup='')
-            li.buttons
-              div
-                input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')
-            li.hide
-              label(for='comment') Do Not Fill This Out
-              textarea#comment(name='comment', rows='1', cols='1')
-              input#idstamp(type='hidden', name='idstamp', value='AnK43sAGhmHot2RtA5EsLz1zjBTTVnvJnbGF30GkeXI=')
-
-    .form-modal
-      .form-content
-        form#form1.wufoo.topLabel.page(name='form1', accept-charset='UTF-8', autocomplete='off', enctype='multipart/form-data', method='post', novalidate='', action='https://piftest.wufoo.com/forms/z17wiku60j3sujm/#public')
-          header#header.info
-              h2 Other Questions
-              p
-                | If you have other questions or inquiries about the Department
-                | of Energy’s Clean Energy portfolio, let us know how we can
-                | help you.
-            ul
-              li#foli1.notranslate
-                label#title1.desc.hide(for='Field1')
-                  | Name
-                span
-                  label(for='Field1') First
-                  input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
-                span
-                  label(for='Field2') Last
-                  input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
-              li#foli3.notranslate
-                label#title3.desc(for='Field3')
-                  | Email
-                div
-                  input#Field3.field.text.medium(name='Field3', type='email', spellcheck='false', value='', maxlength='255', tabindex='3')
-              li#foli4.notranslate
-                label#title4.desc(for='Field4')
-                  | Company
-                div
-                  input#Field4.field.text.medium(name='Field4', type='text', value='', maxlength='255', tabindex='4', onkeyup='')
-              li#foli11.notranslate
-                label#title11.desc(for='Field11')
-                  | Lab
-                div
-                  select#Field11.field.select.medium(name='Field11', tabindex='5')
-                    option(value='National Renewable Energy Lab')
-                      | National Renewable Energy Lab
-                    option(value='Brookhaven National Labs')
-                      | Brookhaven National Labs
-                    option(value='Lawrence Berkeley')
-                      | Lawrence Berkeley
-                    option(value='Pacific Northwest')
-                      | Pacific Northwest
-                    option(value='National Renewable Energy Lab')
-                      | National Renewable Energy Lab
-                    option(value='Oakridge')
-                      | Oakridge
-                    option(value='None/Other', selected='selected')
-                      | None/Other
-              li#foli12.notranslate
-                label#title12.desc(for='Field12')
-                  | Ask your Question
-                div
-                  textarea#Field12.field.textarea.medium(name='Field12', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='')
-              li#foli14.notranslate.hide
-                label#title14.desc(for='Field14')
-                  | isPending
-                div
-                  input#Field14.field.text.medium(name='Field14', type='text', value='isPending', maxlength='255', tabindex='7', onkeyup='')
-              li#foli16.notranslate.hide
-                label#title16.desc(for='Field16')
-                  | tags
-                div
-                  input#Field16.field.text.medium(name='Field16', type='text', value='Other Questions', maxlength='255', tabindex='8', onkeyup='')
-              li.buttons
-                div
-                  input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')
-              li.hide
-                label(for='comment') Do Not Fill This Out
-                textarea#comment(name='comment', rows='1', cols='1')
-                input#idstamp(type='hidden', name='idstamp', value='lOuH9FrvZrH6eceIwmvJ7xJ+1tOOe5F+y8idH5klz/o=')
-    .overlay
+    include forms/_scientist_form.jade
+    include forms/_partner_form.jade
+    include forms/_general_form.jade
+  .overlay
 
