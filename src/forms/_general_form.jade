@@ -31,7 +31,7 @@
             label#title11.desc(for='Field11')
               | Lab
             div
-              select#Field11.field.select.medium(name='Field11', tabindex='5')
+              select#Field11.field.select.medium(name='Field11', tabindex='5', onChange='ceic.formTriggers.repeatValue(this)')
                 option(value='National Renewable Energy Lab')
                   | National Renewable Energy Lab
                 option(value='Brookhaven National Labs')
@@ -61,6 +61,11 @@
               | tags
             div
               input#Field16.field.text.medium(name='Field16', type='text', value='Other Questions', maxlength='255', tabindex='8', onkeyup='')
+          li#foli18.notranslate.hide
+            label#title18.desc(for='Field18')
+              | Source
+            div
+              input#Field18.field.text.medium(name='Field18', type='text', value='', maxlength='255', tabindex='9', onkeyup='')
           li.buttons
             div
               input#saveForm.btTxt.submit(name='saveForm', type='submit', value='Submit')

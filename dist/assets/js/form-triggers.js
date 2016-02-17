@@ -18,6 +18,10 @@ ceic.formTriggers = {
     });
   },
 
+  repeatValue: function(showed) {
+    document.getElementById("Field18").value = showed.value;
+  },
+
   hideForms: function() {
     $(".form-modal").removeClass("active");
     ceic.formTriggers.hideOverlay();
