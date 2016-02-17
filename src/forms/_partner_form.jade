@@ -13,15 +13,15 @@
             | Name
           span
             label(for='Field1') First
-            input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1')
+            input#Field1.field.text.fn(name='Field1', type='text', value='', size='8', tabindex='1', required)
           span
             label(for='Field2') Last
-            input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2')
+            input#Field2.field.text.ln(name='Field2', type='text', value='', size='14', tabindex='2', required)
         li#foli4.notranslate
           label#title4.desc(for='Field4')
             | Email
           div
-            input#Field4.field.text.medium(name='Field4', type='email', spellcheck='false', value='', maxlength='255', tabindex='3')
+            input#Field4.field.text.medium(name='Field4', type='email', spellcheck='false', value='', maxlength='255', tabindex='3', required)
         li#foli3.notranslate
           label#title3.desc(for='Field3')
             | Company
@@ -106,7 +106,7 @@
           label#title7.desc(for='Field7')
             | Description of Interest
           div
-            textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='')
+            textarea#Field7.field.textarea.medium(name='Field7', spellcheck='true', rows='10', cols='50', tabindex='6', onkeyup='', required)
           li#foli9.notranslate.hide
             label#title9.desc(for='Field9')
               | isPending

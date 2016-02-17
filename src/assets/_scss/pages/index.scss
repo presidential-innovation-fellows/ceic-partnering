@@ -44,7 +44,7 @@
   left: 50%;
   margin-left: -20em;
   opacity: 0;
-  padding: 1.5em;
+  padding: 2em;
   position: fixed;
   top: 10%;
   visibility: hidden;
@@ -62,7 +62,7 @@
   }
 
   h2 {
-    color: $color-blue-green;
+    color: darken($color-primary, 10);
     font-family: $header-font;
     font-size: 2.5em;
     font-weight: normal;
@@ -81,9 +81,15 @@
       border: none;
       border-radius: 0.25em;
       color: darken($color-gray, 2);
+      max-width: none;
 
       &:focus {
         box-shadow: 0 0 2px darken($color-primary, 10);
+      }
+
+      &.parsley-error {
+        border: 1px solid $color-secondary;
+        box-shadow: 0 0 2px $color-secondary;
       }
     }
   }
@@ -91,6 +97,7 @@
   label {
     color: $color-gray;
     font-size: 0.9em;
+    margin-top: 1em;
 
     &[for="Field1"],
     &[for="Field2"] {
@@ -98,6 +105,10 @@
         content: " Name"
       }
     }
+  }
+
+  li {
+    margin: 0;
   }
 
   p {
@@ -115,6 +126,14 @@
     }
   }
 
+  ul {
+    margin-top: 1em;
+
+    &.parsley-errors-list {
+      margin-top: 0.4em;
+    }
+  }
+
   textarea {
     background-color: lighten($color-gray-tan, 1);
     border: none;
@@ -124,6 +143,11 @@
 
     &:focus {
       box-shadow: 0 0 2px darken($color-primary, 10);
+    }
+
+    &.parsley-error {
+      border: 1px solid $color-secondary;
+      box-shadow: 0 0 2px $color-secondary;
     }
   }
 
@@ -243,6 +267,13 @@
     display: block;
   }
 }
+
+.parsley-errors-list {
+  color: $color-gray;
+  font-size: 0.8em;
+  margin: 0;
+}
+
 
 .site-hero {
   background-color: $color-white;

@@ -4433,7 +4433,7 @@ h6 {
   left: 50%;
   margin-left: -20em;
   opacity: 0;
-  padding: 1.5em;
+  padding: 2em;
   position: fixed;
   top: 10%;
   visibility: hidden;
@@ -4446,7 +4446,7 @@ h6 {
     background-color: #1C907F;
     padding: 0.75em 1.5em; }
   .form-modal h2 {
-    color: #1C907F;
+    color: #1ca34b;
     font-family: "Quicksand";
     font-size: 2.5em;
     font-weight: normal;
@@ -4458,14 +4458,21 @@ h6 {
     background-color: #f0eae4;
     border: none;
     border-radius: 0.25em;
-    color: #565c65; }
+    color: #565c65;
+    max-width: none; }
     .form-modal input[type="email"]:focus, .form-modal input[type="text"]:focus {
       box-shadow: 0 0 2px #1ca34b; }
+    .form-modal input[type="email"].parsley-error, .form-modal input[type="text"].parsley-error {
+      border: 1px solid #e31c3d;
+      box-shadow: 0 0 2px #e31c3d; }
   .form-modal label {
     color: #5b616b;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    margin-top: 1em; }
     .form-modal label[for="Field1"]::after, .form-modal label[for="Field2"]::after {
       content: " Name"; }
+  .form-modal li {
+    margin: 0; }
   .form-modal p {
     color: #5b616b;
     font-size: 0.9em; }
@@ -4475,6 +4482,10 @@ h6 {
     color: #565c65; }
     .form-modal select:focus {
       box-shadow: 0 0 2px #1ca34b; }
+  .form-modal ul {
+    margin-top: 1em; }
+    .form-modal ul.parsley-errors-list {
+      margin-top: 0.4em; }
   .form-modal textarea {
     background-color: #f0eae4;
     border: none;
@@ -4483,6 +4494,9 @@ h6 {
     max-width: none; }
     .form-modal textarea:focus {
       box-shadow: 0 0 2px #1ca34b; }
+    .form-modal textarea.parsley-error {
+      border: 1px solid #e31c3d;
+      box-shadow: 0 0 2px #e31c3d; }
   .form-modal .hide {
     display: none; }
   .form-modal .instruct {
@@ -4567,6 +4581,11 @@ h6 {
 
 .pages-index ul {
   display: block; }
+
+.parsley-errors-list {
+  color: #5b616b;
+  font-size: 0.8em;
+  margin: 0; }
 
 .site-hero {
   background-color: #ffffff;

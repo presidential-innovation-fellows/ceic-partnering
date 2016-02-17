@@ -40,9 +40,16 @@ ceic.formTriggers = {
   showOverlay: function() {
     $(".overlay").addClass("active");
     ceic.formTriggers.bindOverlay();
+  },
+
+  validateForms: function() {
+    $("#form1").parsley();
+    $("#form3").parsley();
+    $("#form4").parsley();
   }
 };
 
 $(document).ready(function(){
+  ceic.formTriggers.validateForms();
   ceic.formTriggers.bindFormTriggers();
 });
