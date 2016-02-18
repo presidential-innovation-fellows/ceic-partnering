@@ -5,9 +5,29 @@ module.exports = function(grunt) {
     clean: ['dist'],
 
     jade: {
-      compile: {
+      development: {
         options: {
           data: {
+            base_url: "/",
+            debug: false
+          }
+        },
+        files: [ {
+          cwd: 'src',
+          src: [
+            '**/*.jade',
+            '!**/_*.*',
+            '!**/_*/**'
+          ],
+          dest: 'dist',
+          expand: true,
+          ext: '.html'
+        } ]
+      },
+      production: {
+        options: {
+          data: {
+            base_url: "http://beta.pif.gov/ceic-partnering",
             debug: false
           }
         },
@@ -111,7 +131,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
     'clean',
-    'jade',
+    'jade:development',
     'sass',
     'copy',
     'connect:server',
@@ -119,6 +139,10 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('deploy', [
+    'clean',
+    'jade:production',
+    'sass',
+    'copy',
     'gh-pages'
   ]);
 };
