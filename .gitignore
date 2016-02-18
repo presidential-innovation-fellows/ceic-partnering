@@ -15,6 +15,7 @@
 /public/assets
 /tags
 /tmp/*
+.grunt
 s3_website.yml
 BingSiteAuth.xml
 node_modules
