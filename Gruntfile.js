@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       production: {
         options: {
           data: {
-            base_url: "http://beta.pif.gov/ceic-partnering",
+            base_url: "/ceic-partnering/",
             debug: false
           }
         },

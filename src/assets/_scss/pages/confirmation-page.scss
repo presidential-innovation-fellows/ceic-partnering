@@ -27,6 +27,7 @@
 
   .usa-button {
     background-color: darken($color-primary, 5);
+    color: $color-white;
     font-family: $header-font;
 
     &:hover {
