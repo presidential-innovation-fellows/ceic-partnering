@@ -30,8 +30,10 @@
           label#title14.desc(for='Field14')
             | Select a Lab
           div
-            select#Field6.field.select.medium(name='Field14', tabindex='5', onChange='ceic.formTriggers.repeatValue(this, "Field15")')
-              option(value='Ames Laboratory', selected='selected')
+            select#Field6.field.select.medium(name='Field14', tabindex='5', onChange='ceic.formTriggers.repeatValue(this, "Field15")' required)
+              option(value="" disabled selected)
+                  | Select a Lab
+              option(value='Ames Laboratory')
                 | Ames Laboratory
               option(value='Argonne National Laboratory')
                 | Argonne National Laboratory

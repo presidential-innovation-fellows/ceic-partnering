@@ -124,6 +124,11 @@
     &:focus {
       box-shadow: 0 0 2px darken($color-primary, 10);
     }
+
+    &.parsley-error {
+      border: 1px solid $color-secondary;
+      box-shadow: 0 0 2px $color-secondary;
+    }
   }
 
   ul {
