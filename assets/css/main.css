@@ -4507,6 +4507,9 @@ h6 {
     color: #565c65; }
     .form-modal select:focus {
       box-shadow: 0 0 2px #1ca34b; }
+    .form-modal select.parsley-error {
+      border: 1px solid #e31c3d;
+      box-shadow: 0 0 2px #e31c3d; }
   .form-modal ul {
     margin-top: 1em; }
     .form-modal ul.parsley-errors-list {
