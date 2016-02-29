@@ -169,16 +169,13 @@
   position: relative;
 }
 
-.hero-art {
-  opacity: 0.25;
-  position: absolute;
-  right: 5em;
-  top: 0;
-  width: 350px;
+.hero-container {
+  box-sizing: border-box;
 
-  img {
-    height: auto;
-    width: 100%;
+  @include media(875px) {
+    background: url("../../assets/img/patent-art.png") no-repeat;
+    background-position: 98% center;
+    background-size: 350px 450px;
   }
 }
 
@@ -281,18 +278,20 @@
 
 
 .site-hero {
-  background-color: $color-white;
-  height: 550px;
   position: relative;
 
-  @include media($extra-large-screen) {
-    height: 800px;
-  }
-
   a {
-    color: darken($color-primary, 5);
+    background-color: darken($color-primary, 7);
+    border-radius: 0.2em;
+    color: $color-white;
     font-family: $header-font;
     font-weight: bold;
+    padding: 0.75em;
+
+    &:hover {
+      background-color: darken($color-primary, 15);
+      color: $color-white;
+    }
   }
 
   h1,
@@ -322,11 +321,11 @@
     }
   }
 
-  header {
-    padding-top: 7em;
+  .hero-header {
+    padding: 7em 0 5em;
 
     @include media($extra-large-screen) {
-      padding-top: 16em;
+      padding: 16em 0 8em;
     }
   }
 
@@ -336,9 +335,8 @@
   }
 
   li {
-    background-color: rgba($color-white, 0.15);
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-right: 1em;
 
     &:hover {

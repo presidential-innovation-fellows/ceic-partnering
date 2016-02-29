@@ -4,8 +4,8 @@ html.no-js(lang='en')
   body.pages-index
     include modules/_disclaimer.jade
     section.site-hero
-      .usa-grid
-        header
+      .usa-grid.hero-container
+        header.hero-header
           span.label Welcome to the
           h1 CEIC Partnering
             br
@@ -20,8 +20,6 @@ html.no-js(lang='en')
               a(class="form-trigger" href="#" data-form-id="form4") Partner with a Lab
             li
               a(class="form-trigger" href="#" data-form-id="form1") Ask a Question
-      .hero-art
-        img(src="assets/img/hero-art-bw-alt.png")
       .down-arrow
         i.fa.fa-arrow-down
 
