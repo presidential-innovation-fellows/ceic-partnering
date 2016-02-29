@@ -2,6 +2,12 @@ var ceic = ceic || {};
 
 ceic.formTriggers = {
 
+  bindCloseTrigger: function() {
+    $(".form-modal .close").on("click", function() {
+      ceic.formTriggers.hideForms();
+    });
+  },
+
   bindFormTriggers: function() {
     $(".form-trigger").on("click", function() {
       event.preventDefault();
@@ -24,6 +30,7 @@ ceic.formTriggers = {
 
   hideForms: function() {
     $(".form-modal").removeClass("active");
+    $("body").removeClass("no-scroll");
     ceic.formTriggers.hideOverlay();
   },
 
@@ -35,6 +42,7 @@ ceic.formTriggers = {
     var $form = $(formId),
         $formModal = $form.closest(".form-modal");
     $formModal.addClass("active");
+    $("body").addClass("no-scroll");
   },
 
   showOverlay: function() {
@@ -52,4 +60,9 @@ ceic.formTriggers = {
 $(document).ready(function(){
   ceic.formTriggers.validateForms();
   ceic.formTriggers.bindFormTriggers();
+  ceic.formTriggers.bindCloseTrigger();
+
+  $(".form-modal").on("click", function(e) {
+    e.stopPropagation();
+  });
 });
