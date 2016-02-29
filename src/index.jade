@@ -78,9 +78,8 @@ html.no-js(lang='en')
               | It is free to submit questions and receive preliminary feedback
               | and information.
 
-    section.usa-grid.forms
-      include forms/_scientist_form.jade
-      include forms/_partner_form.jade
-      include forms/_general_form.jade
-    .overlay
-
+    section.forms.overlay
+      .scroll
+        include forms/_scientist_form.jade
+        include forms/_partner_form.jade
+        include forms/_general_form.jade
