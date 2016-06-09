@@ -5,4 +5,18 @@
   img {
     margin-right: 0.5em;
   }
+
+  .beta {
+    display: none;
+    float: right;
+
+    @include media($medium-screen) {
+      display: inline;
+    }
+
+    a {
+      color: darken($color-primary, 10);
+      margin-left: 0.2em;
+    }
+  }
 }

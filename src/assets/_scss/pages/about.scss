@@ -1,0 +1,44 @@
+.pages-about {
+
+  h1,
+  h2 {
+    font-weight: normal;
+  }
+
+  h2 {
+    margin-bottom: 0.5em;
+  }
+
+  h3 {
+    color: $color-gray;
+    margin: 0 0 0.5em;
+  }
+
+  p {
+    margin: 0 0 1em;
+  }
+
+  .about-content {
+    margin-bottom: 4em;
+
+    @include media($medium-screen) {
+      width: 75%;
+    }
+
+    ul {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .usa-button {
+    background-color: darken($color-primary, 10);
+    font-family: $header-font;
+
+    &:hover {
+      background-color: darken($color-primary, 20);
+    }
+  }
+}

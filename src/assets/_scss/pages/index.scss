@@ -41,15 +41,22 @@
   background-color: $color-tan-light;
   border-radius: 0.25em;
   cursor: default;
-  left: 50%;
-  margin-left: -20em;
+  left: 0.5em;
   opacity: 0;
-  padding: 2em;
+  padding: 2em 1em;
   position: absolute;
+  right: 0.5em;
   top: 5%;
   visibility: hidden;
-  width: 40em;
   z-index: 1000;
+
+  @include media($medium-screen) {
+    left: 50%;
+    margin-left: -20em;
+    padding: 2em;
+    right: auto;
+    width: 40em;
+  }
 
   &.active {
     opacity: 1;
@@ -64,10 +71,15 @@
   h2 {
     color: darken($color-primary, 10);
     font-family: $header-font;
-    font-size: 2.5em;
+    font-size: 2.1em;
     font-weight: normal;
     letter-spacing: -0.05em;
+    line-height: 1em;
     margin-top: 0;
+
+    @include media($medium-screen) {
+      font-size: 2.5em;
+    }
   }
 
   header {
@@ -179,6 +191,13 @@
   }
 }
 
+.form-trigger {
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .hero-container {
   box-sizing: border-box;
 
@@ -192,11 +211,15 @@
 .how-icon {
   background-color: darken($color-primary, 5);
   border-radius: 0.25em;
+  display: none;
   height: 2.5em;
-  margin: 0 auto;
   padding: 0.4em 0;
   text-align: center;
   width: 2.5em;
+
+  @include media($medium-screen) {
+    display: inline-block;
+  }
 
   i {
     color: lighten($color-primary, 35);
@@ -205,7 +228,10 @@
 }
 
 .how-listitem {
-  @include span-columns(4);
+
+  @include media($medium-screen) {
+    @include span-columns(4);
+  }
 
   &:nth-child(2n) {
     .icon {
@@ -216,29 +242,40 @@
 
 .overview {
   background-color: $color-gray;
-  padding: 8em 0;
+  padding: 4em 0;
+
+  @include media($medium-screen) {
+    padding: 8em 0;
+    text-align: center;
+  }
 
   h1 {
     color: $color-white;
     font-family: $header-font;
     font-size: 2.25em;
     font-weight: normal;
-    margin-top: 0;
-    text-align: center;
+    margin: 0 0 1em;
+
+    @include media($medium-screen) {
+      margin: 0;
+    }
   }
 
   h2 {
     color: $color-white;
     font-size: 1.2em;
     margin: 0.5em 0 0;
-    text-align: center;
   }
 
   p {
     color: darken($color-white, 20);
     font-size: 0.9em;
     font-weight: 100;
-    text-align: center;
+    margin-top: 0;
+
+    @include media($medium-screen) {
+      margin-top: 1em;
+    }
   }
 
   ul {
@@ -249,34 +286,14 @@
 
   .process-line {
     border-top: 4px solid lighten($color-gray, 10);
+    display: none;
     margin: 5em auto 0;
     max-width: 36em;
     width: 70%;
-  }
-}
 
-.pages-index {
-
-  a {
-    color: $color-primary;
-    font-weight: bold;
-    text-decoration: none;
-
-    &:hover {
-      color: darken($color-primary, 10);
+    @include media($medium-screen) {
+      display: block;
     }
-  }
-
-  li {
-    display: block;
-
-    &.hide {
-      display: none;
-    }
-  }
-
-  ul {
-    display: block;
   }
 }
 
@@ -332,10 +349,14 @@
   }
 
   .hero-header {
-    padding: 7em 0 5em;
+    padding: 4em 0 2em;
+
+    @include media($medium-screen) {
+      padding: 5em 0;
+    }
 
     @include media($extra-large-screen) {
-      padding: 16em 0 8em;
+      padding: 14em 0 8em;
     }
   }
 

@@ -1,0 +1,25 @@
+.app-footer {
+  background-color: darken($color-gray, 10);
+  padding: 4em 0;
+
+  li {
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .logos {
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      max-width: 5em;
+    }
+  }
+}

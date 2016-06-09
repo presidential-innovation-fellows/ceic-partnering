@@ -3,23 +3,23 @@ html.no-js(lang='en')
   include modules/_head.jade
   body.pages-index
     include modules/_disclaimer.jade
+    include modules/_nav.jade
     section.site-hero
       .usa-grid.hero-container
         header.hero-header
           span.label Welcome to the
-          h1 CEIC Partnering
+          h1 Lab Partnering
             br
             | Service
           p
             | Connecting you with experts and resources on clean energy
-            | technologies at the Department of Energy.
+            | technologies. A service of the U.S. Department of Energy’s Clean
+            | Energy Investment Center.
           ul.form-triggers
             li
               a(class="form-trigger" href="#" data-form-id="form3") Connect with an Expert
             li
               a(class="form-trigger" href="#" data-form-id="form4") Partner with a Lab
-            li
-              a(class="form-trigger" href="#" data-form-id="form1") Ask a Question
       .down-arrow
         i.fa.fa-arrow-down
 
@@ -33,17 +33,19 @@ html.no-js(lang='en')
             .how-icon
               i.fa.fa-comment
             h2 Send a Message
-            p Fill out one of the three forms above to send us a message.
+            p
+              | Utilize the Connect with an Expert or Partner with a Lab
+              | features to send a message.
           li.how-listitem
             .how-icon
               i.fa.fa-code-fork
-            h2 Find an Expert
-            p Our tech transfer officers route your inquiry to the relevant experts.
+            h2 Connect to the National Laboratories
+            p Lab Tech Transfer staff will review your inquiry.
           li.how-listitem
             .how-icon
               i.fa.fa-comments
             h2 Connect
-            p Once an expert is found, they'll reach out with answers to your questions.
+            p You will receive a response to your question.
 
     section.faq
       .usa-grid
@@ -82,4 +84,3 @@ html.no-js(lang='en')
       .scroll
         include forms/_scientist_form.jade
         include forms/_partner_form.jade
-        include forms/_general_form.jade

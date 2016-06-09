@@ -1,3 +1,13 @@
+a {
+  color: $color-primary;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($color-primary, 10);
+  }
+}
+
 body {
   background: $background-color;
   position: relative;
@@ -22,4 +32,16 @@ h4,
 h5,
 h6 {
   font-family: $header-font;
+}
+
+li {
+  display: block;
+
+  &.hide {
+    display: none;
+  }
+}
+
+ul {
+  display: block;
 }

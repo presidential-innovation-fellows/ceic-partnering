@@ -1,11 +1,22 @@
 .site-nav {
-  background-color: $color-primary;
-  color: $color-white;
+  font-size: 0.9em;
+  margin-top: 1em;
 
-  h1 {
-    font-family: $font-sans;
-    font-size: 1.5em;
+  a {
+    color: $color-gray;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  ul {
+    font-family: $header-font;
     margin: 0;
-    padding: 1em 0;
   }
 }

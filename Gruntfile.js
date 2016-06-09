@@ -95,7 +95,7 @@ module.exports = function(grunt) {
       },
       jade: {
         files: ['src/**/*.jade'],
-        tasks: ['jade']
+        tasks: ['jade:development']
       },
       sass: {
         files: ['src/**/*.scss'],
@@ -127,7 +127,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
 
   grunt.registerTask('default', [
     'clean',

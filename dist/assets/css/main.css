@@ -14,7 +14,7 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -4372,15 +4372,77 @@ body {
   font-size: 0.8em; }
   .usa-disclaimer img {
     margin-right: 0.5em; }
+  .usa-disclaimer .beta {
+    display: none;
+    float: right; }
+    @media screen and (min-width: 600px) {
+      .usa-disclaimer .beta {
+        display: inline; } }
+    .usa-disclaimer .beta a {
+      color: #1ca34b;
+      margin-left: 0.2em; }
+
+.app-footer {
+  background-color: #44484f;
+  padding: 4em 0; }
+  .app-footer li img {
+    height: auto;
+    width: 100%; }
+  .app-footer ul {
+    margin: 0; }
+  .app-footer .logos li {
+    display: inline-block;
+    margin-right: 1em;
+    max-width: 5em; }
 
 .site-nav {
-  background-color: #23CF5F;
-  color: #ffffff; }
-  .site-nav h1 {
-    font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
-    font-size: 1.5em;
-    margin: 0;
-    padding: 1em 0; }
+  font-size: 0.9em;
+  margin-top: 1em; }
+  .site-nav a {
+    color: #5b616b; }
+  .site-nav li {
+    display: inline-block;
+    margin: 0 1em 0 0; }
+    .site-nav li:last-child {
+      margin-right: 0; }
+  .site-nav ul {
+    font-family: "Quicksand";
+    margin: 0; }
+
+.pages-about h1,
+.pages-about h2 {
+  font-weight: normal; }
+
+.pages-about h2 {
+  margin-bottom: 0.5em; }
+
+.pages-about h3 {
+  color: #5b616b;
+  margin: 0 0 0.5em; }
+
+.pages-about p {
+  margin: 0 0 1em; }
+
+.pages-about .about-content {
+  margin-bottom: 4em; }
+  @media screen and (min-width: 600px) {
+    .pages-about .about-content {
+      width: 75%; } }
+  .pages-about .about-content ul:last-child {
+    margin-bottom: 0; }
+
+.pages-about .usa-button {
+  background-color: #1ca34b;
+  font-family: "Quicksand"; }
+  .pages-about .usa-button:hover {
+    background-color: #147837; }
+
+a {
+  color: #23CF5F;
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    color: #1ca34b; }
 
 body {
   background: #f9f9f9;
@@ -4400,6 +4462,14 @@ h4,
 h5,
 h6 {
   font-family: "Quicksand"; }
+
+li {
+  display: block; }
+  li.hide {
+    display: none; }
+
+ul {
+  display: block; }
 
 .pages-confirmation-page a {
   color: #1ca34b;
@@ -4458,15 +4528,21 @@ h6 {
   background-color: #FCFAF7;
   border-radius: 0.25em;
   cursor: default;
-  left: 50%;
-  margin-left: -20em;
+  left: 0.5em;
   opacity: 0;
-  padding: 2em;
+  padding: 2em 1em;
   position: absolute;
+  right: 0.5em;
   top: 5%;
   visibility: hidden;
-  width: 40em;
   z-index: 1000; }
+  @media screen and (min-width: 600px) {
+    .form-modal {
+      left: 50%;
+      margin-left: -20em;
+      padding: 2em;
+      right: auto;
+      width: 40em; } }
   .form-modal.active {
     opacity: 1;
     visibility: visible; }
@@ -4476,10 +4552,14 @@ h6 {
   .form-modal h2 {
     color: #1ca34b;
     font-family: "Quicksand";
-    font-size: 2.5em;
+    font-size: 2.1em;
     font-weight: normal;
     letter-spacing: -0.05em;
+    line-height: 1em;
     margin-top: 0; }
+    @media screen and (min-width: 600px) {
+      .form-modal h2 {
+        font-size: 2.5em; } }
   .form-modal header {
     text-align: center; }
   .form-modal input[type="email"], .form-modal input[type="text"] {
@@ -4543,6 +4623,9 @@ h6 {
   .form-modal .instruct {
     margin-top: 0.25em; }
 
+.form-trigger:hover {
+  text-decoration: none; }
+
 .hero-container {
   box-sizing: border-box; }
   @media screen and (min-width: 875px) {
@@ -4554,69 +4637,71 @@ h6 {
 .how-icon {
   background-color: #1fb955;
   border-radius: 0.25em;
+  display: none;
   height: 2.5em;
-  margin: 0 auto;
   padding: 0.4em 0;
   text-align: center;
   width: 2.5em; }
+  @media screen and (min-width: 600px) {
+    .how-icon {
+      display: inline-block; } }
   .how-icon i {
     color: #b2f2c9;
     font-size: 1.5em; }
 
-.how-listitem {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 31.7615656014%; }
-  .how-listitem:last-child {
-    margin-right: 0; }
-  .how-listitem:nth-child(2n) .icon {
-    padding: 0.5em; }
+@media screen and (min-width: 600px) {
+  .how-listitem {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .how-listitem:last-child {
+      margin-right: 0; } }
+
+.how-listitem:nth-child(2n) .icon {
+  padding: 0.5em; }
 
 .overview {
   background-color: #5b616b;
-  padding: 8em 0; }
+  padding: 4em 0; }
+  @media screen and (min-width: 600px) {
+    .overview {
+      padding: 8em 0;
+      text-align: center; } }
   .overview h1 {
     color: #ffffff;
     font-family: "Quicksand";
     font-size: 2.25em;
     font-weight: normal;
-    margin-top: 0;
-    text-align: center; }
+    margin: 0 0 1em; }
+    @media screen and (min-width: 600px) {
+      .overview h1 {
+        margin: 0; } }
   .overview h2 {
     color: #ffffff;
     font-size: 1.2em;
-    margin: 0.5em 0 0;
-    text-align: center; }
+    margin: 0.5em 0 0; }
   .overview p {
     color: #cccccc;
     font-size: 0.9em;
     font-weight: 100;
-    text-align: center; }
+    margin-top: 0; }
+    @media screen and (min-width: 600px) {
+      .overview p {
+        margin-top: 1em; } }
   .overview ul {
     display: block;
     margin: -2em auto 0;
     max-width: 50em; }
   .overview .process-line {
     border-top: 4px solid #727a87;
+    display: none;
     margin: 5em auto 0;
     max-width: 36em;
     width: 70%; }
-
-.pages-index a {
-  color: #23CF5F;
-  font-weight: bold;
-  text-decoration: none; }
-  .pages-index a:hover {
-    color: #1ca34b; }
-
-.pages-index li {
-  display: block; }
-  .pages-index li.hide {
-    display: none; }
-
-.pages-index ul {
-  display: block; }
+    @media screen and (min-width: 600px) {
+      .overview .process-line {
+        display: block; } }
 
 .parsley-errors-list {
   color: #5b616b;
@@ -4655,10 +4740,13 @@ h6 {
       .site-hero h2 {
         font-size: 2em; } }
   .site-hero .hero-header {
-    padding: 7em 0 5em; }
+    padding: 4em 0 2em; }
+    @media screen and (min-width: 600px) {
+      .site-hero .hero-header {
+        padding: 5em 0; } }
     @media screen and (min-width: 1400px) {
       .site-hero .hero-header {
-        padding: 16em 0 8em; } }
+        padding: 14em 0 8em; } }
   .site-hero i {
     color: #ffffff;
     font-size: 1.5em; }
