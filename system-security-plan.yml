@@ -16,7 +16,7 @@ integrity: low
 availability: low
 security-baseline: low
 
-system-type: major=
+system-type: major
 level-of-identity-assurance: 0
 staff:
   authorizing-official:
