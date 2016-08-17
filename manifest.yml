@@ -1,0 +1,10 @@
+---
+applications:
+- name: lab-partnering-service
+  memory: 64M
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  env:
+    FORCE_HTTPS: true
+  path: dist
+  routes:
+  - route: ceic-lab-partnering-service.apps.cloud.gov

@@ -27,6 +27,25 @@ module.exports = function(grunt) {
       production: {
         options: {
           data: {
+            base_url: "/",
+            debug: false
+          }
+        },
+        files: [ {
+          cwd: 'src',
+          src: [
+            '**/*.jade',
+            '!**/_*.*',
+            '!**/_*/**'
+          ],
+          dest: 'dist',
+          expand: true,
+          ext: '.html'
+        } ]
+      },
+      staging: {
+        options: {
+          data: {
             base_url: "/ceic-partnering/",
             debug: false
           }
@@ -44,7 +63,6 @@ module.exports = function(grunt) {
         } ]
       }
     },
-
     sass: {
       options: {
         sourceMap: true
@@ -112,11 +130,17 @@ module.exports = function(grunt) {
     },
 
     'gh-pages': {
-        options: {
-          base: 'dist'
-        },
-        src: ['**']
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
+    },
+
+    shell: {
+      cloudGovDeploy: {
+        command: 'cf push'
       }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -127,6 +151,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', [
     'clean',
@@ -139,9 +164,17 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', [
     'clean',
-    'jade:production',
+    'jade:staging',
     'sass',
     'copy',
     'gh-pages'
+  ]);
+
+  grunt.registerTask('cloud-gov-deploy', [
+    'clean',
+    'jade:production',
+    'sass',
+    'copy',
+    'shell:cloudGovDeploy'
   ]);
 };
