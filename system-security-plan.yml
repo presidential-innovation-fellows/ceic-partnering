@@ -1,0 +1,70 @@
+---
+name: ceic-partnering
+uniqueID: PIF-20160101-20161231-08
+version: 1.0.0
+# descriptions:
+# https://18f.gsa.gov/dashboard/
+phase: alpha
+# `D26 Civilian Operations` is most common for 18F projects.
+# http://csrc.nist.gov/publications/nistpubs/800-60-rev1/SP800-60_Vol1-Rev1.pdf#page=23
+information-types:
+- D26 Civilian Operations
+
+# https://pages.18f.gov/before-you-ship/ato/levels/
+confidentiality: low
+integrity: low
+availability: low
+security-baseline: low
+
+system-type: major=
+level-of-identity-assurance: 0
+staff:
+  authorizing-official:
+    name: Noah Kunin
+    title: 18F Infrastructure Director
+    org: General Services Administration
+    unit: 18F
+    email: devops@gsa.gov
+  system-owner:
+    name: Andrew Stroup
+    title: Director, Product and Technology
+    org: General Services Administration
+    unit: PIF
+    email: pif-team@gsa.gov
+  system-management:
+    name: Andrew Stroup
+    title: Director, Product and Technology
+    org: General Services Administration
+    unit: PIF
+    email: pif-team@gsa.gov
+  system-security-officer:
+    name: Andrew Stroup
+    title: Director, Product and Technology
+    org: General Services Administration
+    unit: PIF
+    email: pif-team@gsa.gov
+  technical-lead:
+    name: Luke Keller
+    title: Technical Lead
+    org: General Services Administration
+    unit: PIF
+    email: pif@pif.gov
+leveraged-authorizations:
+- https://www.fedramp.gov/marketplace/compliant-systems/amazon-web-services-aws-eastwest-us-public-cloud/
+purpose: https://github.com/presidential-innovation-fellows/ceic-partnering/blob/master/README.md
+components:
+- https://github.com/presidential-innovation-fellows/ceic-partnering
+
+# these will be the same unless your architecture is especially complex
+system-diagram: <link>
+
+environments:
+- Cloud Foundry
+- Amazon Web Services East
+user-types:
+  developer:
+    functions:
+    - deployment
+    - engineering
+controls:
+- https://drive.google.com/a/gsa.gov/folderview?id=0B2gHjLPT7cBtRklBcy0yVkdnSDg&usp=sharing
