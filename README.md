@@ -1,3 +1,5 @@
+[![Dependency Status](https://www.gemnasium.com/badges/github.com/presidential-innovation-fellows/ceic-partnering.svg)](https://www.gemnasium.com/github.com/presidential-innovation-fellows/ceic-partnering)
+
 #CEIC Partnering Tool
 
 ### Public domain
