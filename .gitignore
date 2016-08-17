@@ -20,3 +20,5 @@ s3_website.yml
 BingSiteAuth.xml
 node_modules
 simulation.html
+node_modules
+.eslintrc
