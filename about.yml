@@ -1,0 +1,140 @@
+---
+# .about.yml project metadata
+#
+# Short name that acts as the project identifier (required)
+name: ceic-partnering
+
+# Full proper name of the project (required)
+full_name: CEIC Lab Partnering Services
+
+# The type of content in the repo
+# values: app, docs, policy
+type: app
+
+# Describes whether a project team, working group/guild, etc. owns the repo (required)
+# values: guild, working-group, project
+owner_type: project
+
+# Name of the main project repo if this is a sub-repo; name of the working group/guild repo if this is a working group/guild subproject
+#parent:
+
+# Maturity stage of the project (required)
+# values: discovery, alpha, beta, live, sunset, transfer, end
+stage: alpha
+
+# Description of the project
+description: insert text here
+
+# Tags that describe the project or aspects of the project
+tags:
+- add
+- your
+- tags
+- here
+- e.g. cloud
+- marketplace
+
+# Should this repo have automated tests? If so, set to `true`. (required)
+# values: true, false
+testable: true
+
+# Team members contributing to the project (required)
+# Items:
+# - github: GitHub user name
+#   id: Internal team identifier/user name
+#   role: Team member's role; leads should be designated as 'lead'
+team:
+- github: lukad03
+  id: Luke Keller
+  role: Presidential Innovation Fellow
+
+- github: adamsfallen
+  id: Adam Bonnifield
+  role: Presidential Innovation Fellow
+
+# Partners for whom the project is developed
+partners:
+- GSA
+- NIST
+
+# Organizations or individuals who have adopted the project for their own use
+# Items:
+# - id: The name of the organization or individual
+#   url: A URL to the user's version of the project
+#users:
+#-
+
+# Brief descriptions of significant project developments
+#milestones:
+#-
+
+# Technologies used to build the project
+stack:
+- grunt
+- jquery
+
+# Brief description of the project's outcomes
+impact: insert text here
+
+# Services used to supply project status information
+# Items:
+# - name: Name of the service
+#   category: Type of the service
+#   url: URL for detailed information
+#   badge: URL for the status badge
+#services:
+#-
+
+# Licenses that apply to the project and/or its components (required)
+# Items by property name pattern:
+#   .*:
+#     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
+#     url: URL for the text of the license
+licenses:
+  grunt:
+    name:
+    url:
+  modernizr.min.js:
+    name: MIT
+    url: https://modernizr.com/license/
+  jquery-1.11.3.min.js:
+    name: MIT
+    url: https://jquery.org/license/
+  respond.js:
+    name: MIT
+    url: https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+  selectivizr-min.js:
+    name: MIT
+    url: https://opensource.org/licenses/mit-license.php
+  html5shiv.js:
+    name: MIT and GPL2
+    url: https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md
+  font-awesome.min.css:
+    name: MIT, SIL OFL 1.1, CC BY 3.0
+    url: http://fontawesome.io/license/
+  nginx:
+    name: BSD
+    url: http://nginx.org/LICENSE
+  us-web-design-standards:
+    name: OFL-1.0, OFL-1.1, MIT, CC0-1.0
+    url: https://github.com/18F/web-design-standards/blob/18f-pages-staging/LICENSE.md
+
+# Tag to use when blogging about this project
+#blogTag:
+#-
+
+# Links to project artifacts
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+#   category: Type of the link
+#links:
+#-
+
+# URIs for points-of-contact
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+contact:
+- url: mailto:email@email.gov
+  text: Some Name
